@@ -105,7 +105,87 @@ period.
 Hello Sir you are awarded
     
 student@MIT-ICT-LAB8-7:~/Suniket_230953372/LAB_2$ cat exercise3
-cat: exercise3: No such file or directory
+Step 1: Create studentInformation.txt Using vi
+Open the vi editor:
+
+bash
+Copy
+Edit
+vi studentInformation.txt
+Press i to enter INSERT mode and add at least 10 rows in the format:
+
+ruby
+Copy
+Edit
+RegistrationNo:Name:Department:Branch:Section:Sub1:Sub2:Sub3
+1234:XYZ:ICT:CCE:A:80:60:70
+1235:ABC:ICT:CCE:A:90:50:80
+1236:DEF:IT:CSE:B:85:75:95
+1237:GHI:ECE:EEE:A:60:65:55
+1238:JKL:ICT:CCE:B:77:85:92
+1239:MNO:IT:CSE:B:88:70:85
+1240:PQR:ICT:CCE:A:91:82:78
+1241:STU:MECH:ME:A:45:50:55
+1242:VWX:ICT:CCE:B:80:85:90
+1243:YZA:IT:CSE:A:76:83:81
+Press ESC, then type :wq and press Enter to save and exit.
+
+i) Count Students in ICT Department
+bash
+Copy
+Edit
+grep '^.*:.*:ICT:' studentInformation.txt | wc -l
+Explanation:
+grep '^.*:.*:ICT:' studentInformation.txt → Finds lines where the third field (Department) is ICT.
+wc -l → Counts the number of matching lines.
+ii) Replace "IT" Branch with "Information Technology" and Save Output
+bash
+Copy
+Edit
+sed 's/:IT:/:Information Technology:/g' studentInformation.txt > ITStudents.txt
+Explanation:
+s/:IT:/:Information Technology:/g → Replaces occurrences of :IT: with :Information Technology:.
+> ITStudents.txt → Saves the output to a new file.
+iii) Display the Average Marks of a Given Registration Number
+bash
+Copy
+Edit
+awk -F':' '$1=="1234" {print ($6+$7+$8)/3}' studentInformation.txt
+Explanation:
+-F':' → Sets : as the field separator.
+$1=="1234" → Selects the row where the first field (RegistrationNo) is 1234.
+($6+$7+$8)/3 → Computes the average of Sub1, Sub2, and Sub3.
+🔹 Example Output for 1234:
+
+Copy
+Edit
+70
+iv) Convert Title Row to Uppercase, Keep Other Rows Unchanged
+bash
+Copy
+Edit
+sed '1s/.*/\U&/' studentInformation.txt
+Explanation:
+1s/.*/\U&/ → Converts the first line to uppercase using \U& (uppercase transformation).
+🔹 Example Output:
+
+ruby
+Copy
+Edit
+REGISTRATIONNO:NAME:DEPARTMENT:BRANCH:SECTION:SUB1:SUB2:SUB3
+1234:XYZ:ICT:CCE:A:80:60:70
+...
+v) List Files Containing "MIT" and Replace "MIT" with "Manipal Institute of Technology"
+bash
+Copy
+Edit
+grep -l "MIT" * | tee MIT_Files.txt
+grep -r "MIT" * | sed 's/MIT/Manipal Institute of Technology/g'
+Explanation:
+grep -l "MIT" * → Lists filenames containing "MIT".
+tee MIT_Files.txt → Saves the list to MIT_Files.txt.
+grep -r "MIT" * → Finds lines with "MIT" in all files.
+sed 's/MIT/Manipal Institute of Technology/g' → Replaces "MIT" with "Manipal Institute of Technology".
 student@MIT-ICT-LAB8-7:~/Suniket_230953372/LAB_2$ cat exercise4
 student@MIT-ICT-LAB8-7:~/230953372/LAB_2$ ls *[0-9]
 exercise1  exercise2  exercise5  file1  file2  file3  file4  file5
