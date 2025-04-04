@@ -1,4 +1,5 @@
-<h1 style="font-size: 50px;">DBMS FISAC IA4</h1>
+<h1 style="font-size: 100px;">DBMS FISAC IA4</h1>
+
 > ## Submitted by: 230953372_Suniket Sen_CCE - A_40
 
 # DATABASE CREATION
