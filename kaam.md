@@ -29,25 +29,25 @@ The dataset used consists of student records, where each document contains the f
 ### **Basic Retrieval**
 Retrieve all documents from the collection:
 ```javascript
-db.230953372_COLLECTION.find({})
+db["230953372_COLLECTION"].find().pretty()
 ```
 
 ### **Filtering**
 Find all students enrolled in "Computer Science":
 ```javascript
-db.230953372_COLLECTION.find({ course: "Computer Science" })
+db["230953372_COLLECTION"].find({ course: "Computer Science" }).pretty()
 ```
 
 ### **Sorting**
 Retrieve all documents sorted by `age` in ascending order:
 ```javascript
-db.230953372_COLLECTION.find().sort({ age: 1 })
+db["230953372_COLLECTION"].find().sort({ age: 1 }).pretty()
 ```
 
 ### **Projection**
 Retrieve only the `name` and `course` fields:
 ```javascript
-db.230953372_COLLECTION.find({}, { name: 1, course: 1, _id: 0 })
+db["230953372_COLLECTION"].find({}, { name: 1, course: 1, _id: 0 }).pretty()
 ```
 
 ### **Aggregation**
@@ -59,15 +59,20 @@ db.230953372_COLLECTION.aggregate([
 ```
 
 ### **Update**
-Update the age of "John Doe" to 26:
+Change "John Doe’s" course to AI & ML:
 ```javascript
-db.230953372_COLLECTION.updateOne({ name: "John Doe" }, { $set: { age: 26 } })
+db["230953372_COLLECTION"].updateOne(
+  { name: "John Doe" },
+  { $set: { course: "AI & ML" } }
+)
+
 ```
 
 ### **Deletion**
-Delete a document where `name` is "Emma Thomas":
+Delete all students from "Electrical Engineering":
 ```javascript
-db.230953372_COLLECTION.deleteOne({ name: "Emma Thomas" })
+db["230953372_COLLECTION"].deleteMany({ course: "Electrical Engineering" })
+
 ```
 
 ## 3. Screenshots
