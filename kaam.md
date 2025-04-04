@@ -1,6 +1,7 @@
 # DBMS FISAC IA4
 > ## Submitted by: 230953372_Suniket Sen_CCE - A_40
 # DATASET
+![image](https://github.com/user-attachments/assets/1130645d-669d-4ba7-a8b2-e08025d49e2a)
 
 The dataset used consists of student records, where each document contains the following fields:
 - `name`: The student's full name
