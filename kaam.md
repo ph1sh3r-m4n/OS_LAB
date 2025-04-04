@@ -1,6 +1,6 @@
 # DBMS FISAC IA4
 > ## Submitted by: 230953372_Suniket Sen_CCE - A_40
-# Dataset Description
+# DATASET
 
 The dataset used consists of student records, where each document contains the following fields:
 - `name`: The student's full name
@@ -24,8 +24,24 @@ The dataset used consists of student records, where each document contains the f
     { "name": "Emma Thomas", "age": 25, "course": "Robotics", "submitted_by": "230953372_Suniket" }
 ]
 ```
+## Insertion
+```javascript
+db["230953372_COLLECTION"].insertMany([
+    { "name": "John Doe", "age": 25, "course": "Computer Science", "submitted_by": "230953372_Suniket" },
+    { "name": "Jane Smith", "age": 22, "course": "Electrical Engineering", "submitted_by": "230953372_Suniket" },
+    { "name": "Alice Johnson", "age": 23, "course": "Mechanical Engineering", "submitted_by": "230953372_Suniket" },
+    { "name": "Bob Williams", "age": 24, "course": "Civil Engineering", "submitted_by": "230953372_Suniket" },
+    { "name": "Eve Adams", "age": 21, "course": "Computer Science", "submitted_by": "230953372_Suniket" },
+    { "name": "Charlie Brown", "age": 22, "course": "Data Science", "submitted_by": "230953372_Suniket" },
+    { "name": "David Miller", "age": 24, "course": "AI & ML", "submitted_by": "230953372_Suniket" },
+    { "name": "Sophia White", "age": 23, "course": "Cybersecurity", "submitted_by": "230953372_Suniket" },
+    { "name": "Liam Scott", "age": 22, "course": "Software Engineering", "submitted_by": "230953372_Suniket" },
+    { "name": "Emma Thomas", "age": 25, "course": "Robotics", "submitted_by": "230953372_Suniket" }
+])
+```
+> Result -> acknowledged: true (along with objectids)
 
-# MongoDB Queries Executed
+# QUERIES
 
 ### **Basic Retrieval**
 Retrieve all documents from the collection:
