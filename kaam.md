@@ -58,10 +58,11 @@ db["230953372_COLLECTION"].insertMany([
 
 ### **Basic Retrieval**
 Retrieve all documents from the collection:
+
 ```javascript
 db["230953372_COLLECTION"].find().pretty()
 ```
-![Screenshot 2025-04-05 011356](https://github.com/user-attachments/assets/1a4b43ba-8c61-4aca-8ba5-a817482f0066)
+![Screenshot 2025-04-05 022832](https://github.com/user-attachments/assets/2414aa07-49b0-4d79-9008-e6ed76d6f799)
 
 
 ### **Filtering**
@@ -76,7 +77,8 @@ Retrieve all documents sorted by `age` in ascending order:
 ```javascript
 db["230953372_COLLECTION"].find().sort({ age: 1 }).pretty()
 ```
-![Screenshot 2025-04-05 011728](https://github.com/user-attachments/assets/4851c1af-ac58-46cb-8755-e6df3867afcd)
+
+![Screenshot 2025-04-05 022849](https://github.com/user-attachments/assets/05e9c47e-1681-497b-bc59-53a8f8297506)
 
 ### **Projection**
 Retrieve only the `name` and `course` fields:
