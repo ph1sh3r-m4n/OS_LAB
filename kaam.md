@@ -58,8 +58,8 @@ db["230953372_COLLECTION"].find({}, { name: 1, course: 1, _id: 0 }).pretty()
 ### **Aggregation**
 Count the number of students per course:
 ```javascript
-db.230953372_COLLECTION.aggregate([
-    { $group: { _id: "$course", count: { $sum: 1 } } }
+db["230953372_COLLECTION"].aggregate([
+  { $group: { _id: "$course", total_students: { $sum: 1 } } }
 ])
 ```
 ![Screenshot 2025-04-05 011932](https://github.com/user-attachments/assets/f6dcc187-07f1-43c3-b077-93411bc54695)
