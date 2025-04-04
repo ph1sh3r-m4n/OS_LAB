@@ -1,5 +1,5 @@
-# MongoDB Atlas Report
-
+# DBMS FISAC IA4
+> ## Submitted by: 230953372_Suniket Sen_CCE - A_40
 ## 1. Dataset Description
 
 The dataset used consists of student records, where each document contains the following fields:
@@ -7,6 +7,7 @@ The dataset used consists of student records, where each document contains the f
 - `age`: The student's age
 - `course`: The course the student is enrolled in
 - `submitted_by`: The registration number of the student who submitted the dataset
+  The dataset aims to store and retrieve student details efficiently using MongoDB queries for retrieval, filtering, sorting, projection, aggregation, updates, and deletion operations.
 
 ### Dataset in JSON Format
 ```json
