@@ -1,7 +1,18 @@
-# DBMS FISAC IA4
+<h1 style="font-size: 50px;">DBMS FISAC IA4</h1>
 > ## Submitted by: 230953372_Suniket Sen_CCE - A_40
-# DATASET
+
+# DATABASE CREATION
 ![image](https://github.com/user-attachments/assets/1130645d-669d-4ba7-a8b2-e08025d49e2a)
+### Here is an attached screenshot of the Database I made in MongoDB Atlas.
+> ### DATABASE -> 230953372_DB
+> ### COLLECTION -> 230953372_COLLECTION
+
+# CONNECTION
+### We download `mongosh` shell to connect our terminal to our database using the provided link in the website.
+### We pass the query `mongosh "mongodb+srv://230953372_Suniket:student@cluster0.cs0cgrk.mongodb.net/230953372_DB?retryWrites=true&w=majority"` where `230953372_Suniket` is my `username` and `student` is my password.  
+### This creates an established connection between my database `230953372_DB` and my `terminal` and from there I can start executing queries.
+
+# DATASET
 
 The dataset used consists of student records, where each document contains the following fields:
 - `name`: The student's full name
