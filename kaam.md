@@ -1,6 +1,6 @@
 # DBMS FISAC IA4
 > ## Submitted by: 230953372_Suniket Sen_CCE - A_40
-### Dataset Description
+# Dataset Description
 
 The dataset used consists of student records, where each document contains the following fields:
 - `name`: The student's full name
@@ -9,7 +9,7 @@ The dataset used consists of student records, where each document contains the f
 - `submitted_by`: The registration number of the student who submitted the dataset
   The dataset aims to store and retrieve student details efficiently using MongoDB queries for retrieval, filtering, sorting, projection, aggregation, updates, and deletion operations.
 
-#### Dataset in JSON Format
+## Dataset in JSON Format
 ```json
 [
     { "name": "John Doe", "age": 25, "course": "Computer Science", "submitted_by": "230953372_Suniket" },
@@ -25,7 +25,7 @@ The dataset used consists of student records, where each document contains the f
 ]
 ```
 
-### MongoDB Queries Executed
+# MongoDB Queries Executed
 
 ### **Basic Retrieval**
 Retrieve all documents from the collection:
