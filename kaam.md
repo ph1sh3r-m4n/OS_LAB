@@ -27,7 +27,7 @@ The dataset used consists of student records, where each document contains the f
 
 ### MongoDB Queries Executed
 
-#### **Basic Retrieval**
+### **Basic Retrieval**
 Retrieve all documents from the collection:
 ```javascript
 db["230953372_COLLECTION"].find().pretty()
@@ -35,28 +35,28 @@ db["230953372_COLLECTION"].find().pretty()
 ![Screenshot 2025-04-05 011356](https://github.com/user-attachments/assets/1a4b43ba-8c61-4aca-8ba5-a817482f0066)
 
 
-#### **Filtering**
+### **Filtering**
 Find all students enrolled in "Computer Science":
 ```javascript
 db["230953372_COLLECTION"].find({ course: "Computer Science" }).pretty()
 ```
 ![Screenshot 2025-04-05 011439](https://github.com/user-attachments/assets/94f844a5-db66-457c-a37e-9878f8e5e330)
 
-#### **Sorting**
+### **Sorting**
 Retrieve all documents sorted by `age` in ascending order:
 ```javascript
 db["230953372_COLLECTION"].find().sort({ age: 1 }).pretty()
 ```
 ![Screenshot 2025-04-05 011728](https://github.com/user-attachments/assets/4851c1af-ac58-46cb-8755-e6df3867afcd)
 
-#### **Projection**
+### **Projection**
 Retrieve only the `name` and `course` fields:
 ```javascript
 db["230953372_COLLECTION"].find({}, { name: 1, course: 1, _id: 0 }).pretty()
 ```
 ![Screenshot 2025-04-05 011903](https://github.com/user-attachments/assets/00f5cba9-6cb0-4dc7-8526-d80a01cdc428)
 
-#### **Aggregation**
+### **Aggregation**
 Count the number of students per course:
 ```javascript
 db["230953372_COLLECTION"].aggregate([
@@ -65,7 +65,7 @@ db["230953372_COLLECTION"].aggregate([
 ```
 ![Screenshot 2025-04-05 011932](https://github.com/user-attachments/assets/f6dcc187-07f1-43c3-b077-93411bc54695)
 
-#### **Update**
+### **Update**
 Change "John Doe’s" course to AI & ML:
 ```javascript
 db["230953372_COLLECTION"].updateOne(
@@ -76,7 +76,7 @@ db["230953372_COLLECTION"].updateOne(
 ```
 ![Screenshot 2025-04-05 012021](https://github.com/user-attachments/assets/e8ce9842-7f4d-44bd-ab2e-0c8fcd6a6659)
 
-#### **Deletion**
+### **Deletion**
 Delete all students from "Electrical Engineering":
 ```javascript
 db["230953372_COLLECTION"].deleteMany({ course: "Electrical Engineering" })
