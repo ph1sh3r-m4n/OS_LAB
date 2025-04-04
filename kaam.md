@@ -1,4 +1,4 @@
-<h1 style="font-size: 100px;">DBMS FISAC IA4</h1>
+# DBMS FISAC IA4
 
 > ## Submitted by: 230953372_Suniket Sen_CCE - A_40
 
