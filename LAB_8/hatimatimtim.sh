@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "^  ^"
+echo "/\\ /\\"
+echo "o  o"
+echo "\( W \)"
+echo " (     )"
+echo "  \\    \\"
+echo "   \\    )"
+echo "    _   _"
+echo "    A   A"
